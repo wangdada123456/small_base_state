@@ -20,7 +20,7 @@ export const constantRoutes = [
     hidden: true
   },
   {
-    path: '/dashboard',
+    path: '/',
     component: Layout,
     children: [{
       path: 'home',
