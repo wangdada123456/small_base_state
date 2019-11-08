@@ -1,0 +1,187 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+*{padding:0;margin:0;}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  min-height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+html{
+  font-size:19.20px;  /*默认以设计稿为基准*/
+}
+
+@media only screen and (max-width: 1366px) {
+  html{
+    font-size:13.66px;
+  }
+}
+
+
+@function px2Rem($px, $base-font-size: 19.2px) {
+  @if (unitless($px)) { //有无单位
+    @return ($px / 19.2) * 1rem;
+  } @else if (unit($px) == em) {
+    @return $px;
+  }
+  @return ($px / $base-font-size) * 1rem;
+}
+
+
+// main-container global css
+.app-container {
+  padding: 20px;
+}
+
+
+.background-style{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.c-white{color:#fff;}
+.c-light-purple{color: #a3b2d7}
+
+.export-bg{background:#506eb9!important;}
+
+.fs30{font-size: 30px}
+.fs28{font-size: 28px}
+.fs26{font-size: 26px}
+.fs24{font-size: 24px}
+.fs22{font-size: 22px}
+.fs20{font-size: 20px}
+.fs18{font-size: 18px}
+.fs16{font-size: 16px}
+.fs14{font-size: 14px}
+.fs12{font-size: 12px}
+
+.padL5{padding-left:5px;}
+.padR5{padding-right:5px;}
+.padT5{padding-top:5px;}
+.padB5{padding-bottom:5px;}
+.padL10{padding-left:10px;}
+.padR10{padding-right:10px;}
+.padT10{padding-top:10px;}
+.padB10{padding-bottom:10px;}
+.padL15{padding-left:15px;}
+.padR15{padding-right:15px;}
+.padT15{padding-top:15px;}
+.padB15{padding-bottom:15px;}
+.padL20{padding-left:20px;}
+.padR20{padding-right:20px;}
+.padT20{padding-top:20px;}
+.padB20{padding-bottom:20px;}
+
+.marL5{margin-left:5px;}
+.marR5{margin-right:5px;}
+.marT5{margin-top:5px;}
+.marB5{margin-bottom:5px;}
+.marL10{margin-left:10px;}
+.marR10{margin-right:10px;}
+.marT10{margin-top:10px;}
+.marB10{margin-bottom:10px;}
+.marL15{margin-left:15px;}
+.marR15{margin-right:15px;}
+.marT15{margin-top:15px;}
+.marB15{margin-bottom:15px;}
+.marL20{margin-left:20px;}
+.marR20{margin-right:20px;}
+.marT20{margin-top:20px;}
+.marB20{margin-bottom:20px;}
+
+.pos-absolute{position: absolute}
+.pos-relate{position: relative}
+.pos-fix{position: fixed}
+.fl{float:left}
+.fr{float:right}
+.tc{text-align: center}
+.font-bold{font-weight: bold}
+
+.dis-j-c{
+  display: flex;
+  justify-content: center;
+}
+.dis-j-a-c{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dis-c-j-c{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dis-c-a-c{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dis-c-j-a-c{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dis-j-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+.anchorBL{
+  display: none;
+}
