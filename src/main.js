@@ -16,7 +16,7 @@ import router from './router'
 import api from './api'
 
 import '@/icons' // icon
-//import '@/permission' // permission control
+import '@/permission' // permission control
 
 
 Vue.use(ElementUI)

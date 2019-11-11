@@ -11,6 +11,7 @@ import Home from '@/views/dashboard/index'
 export const constantRoutes = [
   {
     path: '/login',
+    name: 'login',
     component: () => import('@/views/login/index'),
     hidden: true
   },
