@@ -1,18 +1,18 @@
 <template>
   <div class="app-header">
     <div class="left">
-      <img class="china-mobile" src="../../../public/img/china_mobile.png" alt="">
+      <img class="china-mobile" src="../../assets/img/header/china_mobile.png" alt="">
       <div class="time-box marL10">
         <span class="header-date fs16 c-white">{{nowDate}}<br>{{nowWeek}}</span>
         <span class="header-time fs24 c-white">{{nowHour}}:{{nowMinute}}</span>
       </div>
     </div>
     <div class="right-menu">
-      <img src="../../../public/img/icon_user.png" alt="">
+      <img src="../../assets/img/header/icon_user.png" alt="">
       <div class="user-box marL20">
         <span class="c-white fs14">{{userName}}</span>
       </div>
-      <img src="../../../public/img/icon_signout.png" @click="logout" alt="">
+      <img src="../../assets/img/header/icon_signout.png" @click="logout" alt="">
     </div>
   </div>
 </template>

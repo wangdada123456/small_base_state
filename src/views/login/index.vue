@@ -215,7 +215,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: url("../../../public/img/bg_login1.jpg") no-repeat;
+    background: url("../../assets/img/login/bg_login1.jpg") no-repeat;
   }
   .login-box{
     width:500px;
@@ -267,7 +267,7 @@
       .btn-login{
         width: 100%;
         height:40px;
-        background-image: url("../../../public/img/login/signin_btn_bg.png");
+        background-image: url("../../assets/img/login/signin_btn_bg.png");
         background-size:100%;
         line-height: 40px;
         text-align: center;
