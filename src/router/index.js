@@ -6,7 +6,9 @@ Vue.use(Router)
 
 import Layout from '@/layout'
 import Home from '@/views/dashboard/index'
-
+import DeviceList from '@/views/deviceManage/device_list'
+import DeviceRecycle from '@/views/deviceManage/device_recycle'
+import HighManage from '@/views/deviceManage/high_manage'
 
 export const constantRoutes = [
   {
@@ -30,6 +32,33 @@ export const constantRoutes = [
       component: Home,
       meta: { title: '首页', icon: 'home' }
     },
+    ]
+  },
+  {
+    path: '/device_manage',
+    component: Layout,
+    alwaysShow:true,
+    noShowingChildren:false,
+    meta: { title: '设备管理', icon: 'user' },
+    children: [
+      {
+        path: 'device_list',
+        name: 'deviceList',
+        component: DeviceList,
+        meta: { title: '设备列表', icon: 'table' }
+      },
+      {
+        path: 'device_recycle',
+        name: 'deviceRecycle',
+        component:DeviceRecycle,
+        meta: { title: '设备回收', icon: 'tree' }
+      },
+      {
+        path: 'high_manage',
+        name: 'highManage',
+        component: HighManage,
+        meta: { title: '高级管理', icon: 'nested' }
+      },
     ]
   },
   // 404 page must be placed at the end !!!
