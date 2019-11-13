@@ -118,7 +118,7 @@
               password: md5(this.form.password),
               yzm: this.form.captcha,
             };
-            if(param.username == 'admin' && this.form.password == 'admin'){
+            if(param.name == 'admin' && this.form.password == 'admin'){
               let time = new Date().getTime()
               Cookies.set('token', time, {expires: 7})
               Cookies.set('userName', "admin", {expires: 7})
@@ -127,7 +127,7 @@
             } else {
               this.$api.login.signIn(param).then(res=>{
                 console.log(res);
-                if(res.code !==0){
+                if(res.status !==0){
                   this.$message({
                     message: res.msg,
                     type:'error'
@@ -136,7 +136,7 @@
                   this.getCaptcha()
                 } else {
                   Cookies.set('token', res.token, {expires: res.expire || 0})
-                  Cookies.set('userName', param.username, {expires: res.expire || 0})
+                  Cookies.set('userName', param.name, {expires: res.expire || 0})
                   this.$router.push({name: 'home'})
                 }
               }).catch(err=>{

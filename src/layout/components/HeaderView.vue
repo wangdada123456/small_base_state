@@ -3,8 +3,8 @@
     <div class="left">
       <img class="china-mobile" src="../../assets/img/header/china_mobile.png" alt="">
       <div class="time-box marL10">
-        <span class="header-date fs16 c-white">{{nowDate}}<br>{{nowWeek}}</span>
-        <span class="header-time fs24 c-white">{{nowHour}}:{{nowMinute}}</span>
+        <span class="header-date rfs16 c-white">{{nowDate}}<br>{{nowWeek}}</span>
+        <span class="header-time rfs24 c-white">{{nowHour}}:{{nowMinute}}</span>
       </div>
     </div>
     <div class="right-menu">
@@ -84,8 +84,8 @@ export default {
     display: flex;
     align-items: center;
     .china-mobile{
-      width:45px;
-      height:45px;
+      width:0.2rem;
+      height:0.2rem;
       margin-left: 10px;
     }
     .time-box{
@@ -109,8 +109,8 @@ export default {
     padding-right: 20px;
     align-items: center;
     img{
-      width:45px;
-      height:39px;
+      width:0.2rem;
+      height:0.2rem;
       cursor: pointer;
     }
     .user-box{
