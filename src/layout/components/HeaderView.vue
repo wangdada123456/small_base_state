@@ -17,9 +17,6 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
-// import Breadcrumb from '@/components/Breadcrumb'
-import Hamburger from '@/components/Hamburger'
 import Cookies from 'js-cookie'
 export default {
   name: 'AppHeaderView',
@@ -31,15 +28,6 @@ export default {
         nowMinute: '',
         userName: '',
       }
-  },
-   components: {
-    Hamburger
-  },
-  computed: {
-    ...mapGetters([
-      'sidebar',
-      'avatar'
-    ])
   },
   mounted() {
     this.userName = Cookies.get('userName');
