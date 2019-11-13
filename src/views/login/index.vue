@@ -60,7 +60,7 @@
   </div>
 </template>
 <script>
-  import {getUUID,getCode} from '@/utils'
+  import {getUUID} from '@/utils'
   import md5 from 'js-md5'
   import Cookies from 'js-cookie'
   export default {
@@ -114,11 +114,9 @@
           if (valid) {
             this.loading = true;
             let param = {
-              'username': this.form.account,
-              'password': getCode(md5(md5(this.form.password))),
-              'uuid': this.form.uuid,
-              'captcha': this.form.captcha,
-              't': new Date().getTime()
+              name: this.form.account,
+              password: md5(this.form.password),
+              yzm: this.form.captcha,
             };
             if(param.username == 'admin' && this.form.password == 'admin'){
               let time = new Date().getTime()
@@ -261,7 +259,7 @@
         img{
           width: 38%;
           margin-left:2%;
-          height: 54px;
+          height: 43px;
         }
       }
       .btn-login{

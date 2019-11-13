@@ -15,11 +15,11 @@ function fmtParam(params){
 const login = {
   //获取验证码
   getCaptcha(uuid){
-     return `/captcha.jpg?uuid=${uuid}`
+     return `/admin/yzm?d=${uuid}`
   },
   //登录
   signIn(param) {
-    return post(`/sys/login`, param)
+    return post(`/admin/login`, param)
   },
   //登出
   signOut() {

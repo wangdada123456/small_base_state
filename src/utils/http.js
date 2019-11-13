@@ -1,10 +1,6 @@
 import axios from 'axios'
 import {Message} from 'element-ui'
 
-// 请求超时时间
-axios.defaults.timeout = 1000000;
-// 请求baseURL
-axios.defaults.baseURL = process.env.VUE_APP_BASE_API;
 
 // 响应拦截器
 axios.interceptors.response.use(

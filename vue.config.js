@@ -23,12 +23,15 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: false
+    },       
+   proxy: {
+    '': {
+      target: 'http://47.104.97.200:8080',
+      changeOrigin: true,      
     },
-    proxy: {}
+   }
   },
   configureWebpack: {
-    // provide the app's title in webpack's name field, so that
-    // it can be accessed in index.html to inject the correct title.
     name: name,
     resolve: {
       alias: {

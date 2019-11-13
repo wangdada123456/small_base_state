@@ -1,7 +1,6 @@
 /**
  * Created by PanJiaChen on 16/11/18.
  */
-import NodeRSA from 'node-rsa'
 /**
  * Parse the time to string
  * @param {(Object|string|number)} time
@@ -113,25 +112,4 @@ export function getUUID () {
     return (c === 'x' ? (Math.random() * 16 | 0) : ('r&0x3' | '0x8')).toString(16)
   })
 }
-/**
- * JSEncrypt 
- */
-export function getCode (data) {
-  let key = new NodeRSA('-----BEGIN PUBLIC KEY-----\n' + 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCIRCGt7Pr4JZyDZi96palt9bokF9xhyeJ3WizbeXhBqyXRMyYy5jrvFUkBBL30xBOjoIz61hfH791rV6Y3igiFQFSB5ikbt4AKATOQETjAa+ur1lgchxa6tSXu39592gsVfdftyvI68/LBbkApdwjz81Y9FRARO9gXmuOMrToBZQIDAQAB\n' + '-----END PUBLIC KEY-----');
-  key.setOptions({encryptionScheme: 'pkcs1'})
-  let encryptKey = key.encrypt(data, 'base64')
-  return encryptKey;
-}
 
-/**
- * 脱敏
- */
-export function desensitization(str, beginLen, endLen){
-    let len = str.length;
-    endLen = endLen > 0 ? -endLen : endLen;
-    let firstStr = str.substr(0, beginLen);
-    let lastStr = str.substr(endLen);
-    let middleStr = str.substring(beginLen, len-Math.abs(endLen)).replace(/[\s\S]/ig, '*');
-    return firstStr+middleStr+lastStr;
-
-}
