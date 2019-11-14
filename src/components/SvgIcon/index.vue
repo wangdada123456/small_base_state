@@ -6,6 +6,7 @@
 </template>
 
 <script>
+
 import { isExternal } from '@/utils/validate'
 
 export default {
