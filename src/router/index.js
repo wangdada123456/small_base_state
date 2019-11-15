@@ -26,7 +26,7 @@ export const constantRoutes = [
     path: '/',
     component: Layout,
     children: [{
-      path: 'home',
+      path: '',
       name: 'home',
       alwaysShow:true,
       component: Home,
@@ -61,7 +61,6 @@ export const constantRoutes = [
       },
     ]
   },
-  // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
 

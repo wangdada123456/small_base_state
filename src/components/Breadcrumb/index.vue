@@ -28,13 +28,11 @@ export default {
   },
   methods: {
     getBreadcrumb() {
-      // only show routes with meta.title
       let matched = this.$route.matched.filter(item => item.meta && item.meta.title)
       const first = matched[0]
       this.levelList = matched.filter(item => item.meta && item.meta.title && item.meta.breadcrumb !== false)
     },
     pathCompile(path) {
-      // To solve this problem https://github.com/PanJiaChen/vue-element-admin/issues/561
       const { params } = this.$route
       var toPath = pathToRegexp.compile(path)
       return toPath(params)
