@@ -1,6 +1,6 @@
 <template>
   <div :class="{'has-logo':showLogo}">
-    <logo v-if="showLogo" :collapse="isCollapse" />
+    <retract v-if="showLogo" :collapse="isCollapse" />
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu
         :default-active="activeMenu"
@@ -20,12 +20,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import Logo from './Logo'
+import Retract from './Retract'
 import SidebarItem from './SidebarItem'
 import variables from '@/styles/variables.scss'
 
 export default {
-  components: { SidebarItem, Logo },
+  components: { SidebarItem, Retract },
   computed: {
     ...mapGetters([
       'sidebar'
@@ -36,7 +36,7 @@ export default {
     activeMenu() {
       const route = this.$route
       const { meta, path } = route
-      // if set path, the sidebar will highlight the path you set
+      // 如果设置路径，侧栏将突出显示您设置的路径
       if (meta.activeMenu) {
         return meta.activeMenu
       }

@@ -1,0 +1,41 @@
+<template>
+  <div style="padding: 0 15px;" @click="toggleClick">
+    <div class="hamburger">
+      <svg-icon icon-class="retract" :class-name="this.isActive ? 'is-open' : 'is-active'"/>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Hamburger',
+  props: {
+    isActive: {
+      type: Boolean,
+      default: false
+    }
+  },
+  methods: {
+    toggleClick() {
+      this.$emit('toggleClick')
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.hamburger {
+  display: inline-block;
+  vertical-align: middle;
+  position:absolute;
+  height:100%;
+  
+  right:0px;
+    & .is-active {
+      transform: rotate(180deg);
+    }
+    & .is-open {
+      margin-right:0px !important;
+    }
+}
+</style>
