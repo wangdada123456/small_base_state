@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="contant-wrap">
     <HeaderView/>
     <div :class="classObj" class="app-wrapper"> 
         <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
@@ -56,7 +56,9 @@ export default {
 <style lang="scss" scoped>
   @import "~@/styles/mixin.scss";
   @import "~@/styles/variables.scss";
-
+  .contant-wrap{
+    background:#111430;
+  }
   .app-wrapper {
     @include clearfix;
     position: relative;

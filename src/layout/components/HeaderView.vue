@@ -3,16 +3,20 @@
     <div class="left">
       <img class="china-mobile" src="../../assets/img/header/china_mobile.png" alt="">
       <div class="time-box marL10">
-        <span class="header-date rfs16 c-white">{{nowDate}}<br>{{nowWeek}}</span>
-        <span class="header-time rfs24 c-white">{{nowHour}}:{{nowMinute}}</span>
+        <span class="header-date fs16 c-light-word">{{nowDate}}<br>{{nowWeek}}</span>
+        <span class="header-time fs24 c-light-word">{{nowHour}}:{{nowMinute}}</span>
       </div>
     </div>
     <div class="right-menu">
       <img src="../../assets/img/header/icon_user.png" alt="">
       <div class="user-box marL20">
-        <span class="c-white fs14">{{userName}}</span>
+        <span class="c-light-word fs16 name-wrap">{{userName}}</span>
+        <span class="c-light-word fs16" @click="logout">注销</span>
       </div>
-      <img src="../../assets/img/header/icon_signout.png" @click="logout" alt="">
+      <div class="help-center">
+        <span class="c-light-word fs16">帮助中心</span>
+      </div>
+      <!-- <img src="../../assets/img/header/icon_signout.png" @click="logout" alt=""> -->
     </div>
   </div>
 </template>
@@ -59,21 +63,23 @@ export default {
 
 <style lang="scss" scoped>
 .app-header {
-  height: 60px;
+  height: 90px;
   width: 100%;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  background:#022e63;
+  overflow: hidden;
+  background-image: url("../../assets/img/header/header-backgorund.png");
+  background-size:100% 100%;
 }
 .left{
     height: 100%;
     display: flex;
     align-items: center;
     .china-mobile{
-      width:0.2rem;
-      height:0.2rem;
+      width:45px;
+      height:45px;
       margin-left: 10px;
     }
     .time-box{
@@ -96,9 +102,15 @@ export default {
     display: flex;
     padding-right: 20px;
     align-items: center;
+    .help-center{
+      padding-top:18px;
+    }
+    .name-wrap{
+      padding-bottom:0.02rem;
+    }
     img{
-      width:0.2rem;
-      height:0.2rem;
+      width:35px;
+      height:35px;
       cursor: pointer;
     }
     .user-box{

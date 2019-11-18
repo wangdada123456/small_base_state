@@ -39,25 +39,25 @@ export const constantRoutes = [
     component: Layout,
     alwaysShow:true,
     noShowingChildren:false,
-    meta: { title: '设备管理', icon: 'user' },
+    meta: { title: '设备管理', icon: 'device_manage' },
     children: [
       {
         path: 'device_list',
         name: 'deviceList',
         component: DeviceList,
-        meta: { title: '设备列表', icon: 'table' }
+        meta: { title: '设备列表', icon: 'device_list' }
       },
       {
         path: 'device_recycle',
         name: 'deviceRecycle',
         component:DeviceRecycle,
-        meta: { title: '设备回收', icon: 'tree' }
+        meta: { title: '设备回收', icon: 'device_recycle' }
       },
       {
         path: 'high_manage',
         name: 'highManage',
         component: HighManage,
-        meta: { title: '高级管理', icon: 'nested' }
+        meta: { title: '高级管理', icon: 'high_manage' }
       },
     ]
   },
