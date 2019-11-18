@@ -28,9 +28,9 @@ export default {
   display: inline-block;
   vertical-align: middle;
   position:absolute;
-  height:100%;
-  
-  right:0px;
+  top:5px;
+  right:4px;
+  background: #304156;
     & .is-active {
       transform: rotate(180deg);
     }
