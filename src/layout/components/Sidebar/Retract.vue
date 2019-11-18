@@ -41,7 +41,6 @@ export default {
   width: 100%;
   height: 50px;
   line-height: 50px;
-  background: #304156;
   padding-left:20px;
   overflow: hidden;
   display: flex;

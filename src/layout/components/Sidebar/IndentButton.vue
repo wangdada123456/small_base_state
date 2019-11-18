@@ -30,7 +30,7 @@ export default {
   position:absolute;
   top:5px;
   right:4px;
-  background: #304156;
+  background: #101c39;
     & .is-active {
       transform: rotate(180deg);
     }
