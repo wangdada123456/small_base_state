@@ -6,7 +6,7 @@
 
 <script>
 
-import Breadcrumb from '@/components/Breadcrumb'
+import Breadcrumb from './ContentTabs'
 
 export default {
   components: {
@@ -22,9 +22,9 @@ export default {
   position: relative;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
-  .breadcrumb-container {
-    float: left;
-  }
+  // .breadcrumb-container {
+  //   // float: left;
+  // }
   
 }
 </style>
