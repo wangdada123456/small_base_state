@@ -19,10 +19,11 @@ export default {
 
 <style scoped>
 .app-main {
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 130px);
   width: 100%;
   position: relative;
   overflow: hidden;
+  color:#FFFFFF;
 }
 .fixed-header+.app-main {
   padding-top: 50px;

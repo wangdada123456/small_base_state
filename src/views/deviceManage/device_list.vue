@@ -1,7 +1,7 @@
 
 <template>
   <div class="user-wrap">
-     设备回收
+     设备列表
   </div>
 </template>
 

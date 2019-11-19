@@ -64,7 +64,7 @@ export default {
     },
     selectTab(tab){
       tab = this.contentTabs.filter(item => item.title === tab.name);
-      if(Array.isArray(tab) && tab.lenght > 0 && tab[0].name){
+      if(Array.isArray(tab) && tab.length > 0 && tab[0].name){
          this.$router.push({ name: tab[0].name })
       };
     }
