@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <breadcrumb class="breadcrumb-container" />
+    <!-- <breadcrumb class="breadcrumb-container" /> -->
   </div>
 </template>
 
